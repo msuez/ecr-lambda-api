@@ -14,7 +14,7 @@ const swaggerOptions = {
                 description: 'Servidor local',
             },
             {
-                url: 'https://{stage}.execute-api.{region}.amazonaws.com',
+                url: 'https://n61l1zg042.execute-api.us-east-1.amazonaws.com/',
                 description: 'Servidor de producción',
             },
         ],
