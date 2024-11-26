@@ -19,7 +19,7 @@ const swaggerOptions = {
             },
         ],
     },
-    apis: ['./src/routes/**/*.ts'], // Ubicación de las rutas con anotaciones JSDoc
+    apis: ['./src/routes/**/*.ts', './dist/routes/**/*.js'],
 };
 
 export const swaggerSpec = swaggerJsdoc(swaggerOptions);
