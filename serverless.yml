@@ -1,10 +1,13 @@
 service: ecr-lambda-api
-frameworkVersion: '3'
+frameworkVersion: '^4.0.0'
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs20.x
   region: us-east-1
+  httpApi:
+    cors: true
+    payload: '2.0' 
 
 functions:
   app:
