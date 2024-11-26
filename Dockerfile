@@ -3,4 +3,4 @@ FROM public.ecr.aws/lambda/nodejs:20
 COPY ./dist ${LAMBDA_TASK_ROOT}
 COPY ./node_modules ${LAMBDA_TASK_ROOT}/node_modules
 
-CMD ["app.handler"]
+CMD ["dist/app.handler"]
