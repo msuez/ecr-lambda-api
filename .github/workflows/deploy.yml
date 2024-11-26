@@ -50,5 +50,5 @@ jobs:
       - name: Deploy to AWS Lambda
         run: |
           aws lambda update-function-code \
-            --function-name ecr-lambda-api \
+            --function-name ecr-lambda-api-dev-app \
             --image-uri 780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api:latest
