@@ -1,0 +1,23 @@
+service: ecr-lambda-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  app:
+    handler: dist/app.handler
+    events:
+      - httpApi:
+          path: '/{proxy+}'
+          method: ANY
+
+plugins:
+  - serverless-offline
+
+package:
+  patterns:
+    - '!node_modules/**'
+    - 'dist/**'
