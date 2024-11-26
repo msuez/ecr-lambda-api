@@ -2,6 +2,7 @@
   "name": "ecr-lambda-api",
   "version": "1.0.0",
   "scripts": {
+    "start": "ts-node src/index.ts",
     "build": "tsc",
     "deploy": "npm run build && serverless deploy --force"
   },
