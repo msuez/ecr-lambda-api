@@ -27,4 +27,3 @@ package:
   patterns:
     - '!node_modules/**'
     - 'dist/**'
-    - 'public/**'

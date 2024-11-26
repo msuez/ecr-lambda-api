@@ -8,6 +8,8 @@ const router = Router();
  *   get:
  *     summary: Devuelve un saludo
  *     description: Endpoint para probar la API
+ *     tags:
+ *       - Hello World
  *     responses:
  *       200:
  *         description: Respuesta exitosa
@@ -30,6 +32,8 @@ router.get('/hello', (req, res) => {
  *   get:
  *     summary: Verifica el estado del servidor
  *     description: Devuelve "pong" si el servidor está funcionando.
+ *     tags:
+ *       - Status
  *     responses:
  *       200:
  *         description: Respuesta exitosa
