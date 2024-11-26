@@ -31,5 +31,8 @@ RUN npm install --omit=dev
 # Copiar los archivos de dist generados
 COPY --from=builder /usr/app/dist/ ./
 
+# Copiar la carpeta public para archivos estáticos
+COPY --from=builder /usr/app/public/ ./public/
+
 # Especificar el handler para AWS Lambda
 CMD ["app.handler"]
