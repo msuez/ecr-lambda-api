@@ -11,7 +11,10 @@ provider:
 
 functions:
   app:
-    handler: dist/app.handler
+    name: ecr-lambda-api-dev-app
+    image:
+      uri: 780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api:latest
+    timeout: 30
     events:
       - httpApi:
           path: '/{proxy+}'
