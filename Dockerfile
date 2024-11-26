@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/nodejs:18
+FROM public.ecr.aws/lambda/nodejs:20
 
 WORKDIR /app
 
@@ -12,8 +12,10 @@ RUN npm run build
 
 WORKDIR /var/task
 
-COPY ./node_modules /var/task/node_modules
+# Copiar directamente los archivos desde dist/ a /var/task, sin incluir la carpeta dist
+COPY ./dist/* /var/task/
 
-COPY ./dist /var/task/
+# Copiar las dependencias a la ubicación correcta
+COPY ./node_modules /var/task/node_modules
 
 CMD ["app.handler"]
