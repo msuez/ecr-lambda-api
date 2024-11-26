@@ -106,7 +106,7 @@
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
-                "ImageUri": "780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api@sha256:5b09552e92702a4379aa34c96c4597256fcab3558833ef0d76a514356dec53d7"
+                "ImageUri": "780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api@sha256:ecb2057fb1bd7a51583e9048fa91d12a4b970e81c536f19d3482744bfcf132e9"
               },
               "PackageType": "Image",
               "FunctionName": "ecr-lambda-api-dev-app",
@@ -123,14 +123,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersionqChzHRti8bhhYeyvxbzD3EgWDCF31sNJIVNzDOSyTA": {
+          "AppLambdaVersionHQTmMhBmWlH8OTDUzo0FYUa1W9fhNwgzPZNNfGGFjw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "5b09552e92702a4379aa34c96c4597256fcab3558833ef0d76a514356dec53d7"
+              "CodeSha256": "ecb2057fb1bd7a51583e9048fa91d12a4b970e81c536f19d3482744bfcf132e9"
             }
           },
           "HttpApi": {
@@ -259,7 +259,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionqChzHRti8bhhYeyvxbzD3EgWDCF31sNJIVNzDOSyTA"
+              "Ref": "AppLambdaVersionHQTmMhBmWlH8OTDUzo0FYUa1W9fhNwgzPZNNfGGFjw"
             },
             "Export": {
               "Name": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
@@ -327,7 +327,7 @@
         "package": {},
         "memory": 1024,
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersionqChzHRti8bhhYeyvxbzD3EgWDCF31sNJIVNzDOSyTA"
+        "versionLogicalId": "AppLambdaVersionHQTmMhBmWlH8OTDUzo0FYUa1W9fhNwgzPZNNfGGFjw"
       }
     },
     "configValidationMode": "warn",
@@ -351,7 +351,7 @@
         ],
         "artifactsS3KeyDirname": "serverless/ecr-lambda-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
-        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732642599234-2024-11-26T17:36:39.234Z"
+        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732643293200-2024-11-26T17:48:13.200Z"
       }
     },
     "appId": null,
@@ -359,7 +359,7 @@
     "layers": {}
   },
   "package": {
-    "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732642599234-2024-11-26T17:36:39.234Z",
+    "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732643293200-2024-11-26T17:48:13.200Z",
     "artifact": ""
   }
 }
