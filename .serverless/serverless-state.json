@@ -107,7 +107,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
-                "S3Key": "serverless/ecr-lambda-api/dev/1732623975076-2024-11-26T12:26:15.076Z/ecr-lambda-api.zip"
+                "S3Key": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z/ecr-lambda-api.zip"
               },
               "Handler": "dist/app.handler",
               "Runtime": "nodejs20.x",
@@ -125,14 +125,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersionjI5ReDeYnhdXSLSsYkdj8Xabxm31afk584bYbzuCE6U": {
+          "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "hiBVIY1Ud4M4/W6g1ruQuD1iV+XYpR7fmyibDOMxXjo="
+              "CodeSha256": "+6GmIZlyQ3UGFLg+IFR6sULxUCUd/AL4lbki4e4/cV8="
             }
           },
           "HttpApi": {
@@ -261,7 +261,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionjI5ReDeYnhdXSLSsYkdj8Xabxm31afk584bYbzuCE6U"
+              "Ref": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
             },
             "Export": {
               "Name": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
@@ -328,7 +328,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersionjI5ReDeYnhdXSLSsYkdj8Xabxm31afk584bYbzuCE6U"
+        "versionLogicalId": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
       }
     },
     "configValidationMode": "warn",
@@ -353,7 +353,7 @@
         "artifactsS3KeyDirname": "serverless/ecr-lambda-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
         "artifact": "/Users/matiassuez/Desktop/Workspace/Vercel/ecr-lambda-api/.serverless/ecr-lambda-api.zip",
-        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732623975076-2024-11-26T12:26:15.076Z"
+        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z"
       }
     },
     "appId": null,
@@ -362,7 +362,7 @@
     "artifact": "/Users/matiassuez/Desktop/Workspace/Vercel/ecr-lambda-api/.serverless/ecr-lambda-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732623975076-2024-11-26T12:26:15.076Z",
+    "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z",
     "artifact": "ecr-lambda-api.zip"
   }
 }
