@@ -26,6 +26,5 @@ plugins:
 package:
   patterns:
     - '!node_modules/**'
-    - 'node_modules/swagger-ui-express/**'
-    - 'node_modules/swagger-jsdoc/**'
     - 'dist/**'
+    - 'public/**'

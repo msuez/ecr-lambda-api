@@ -90,7 +90,7 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "ImageUri": "780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api@sha256:7da03a1f822a0a49be2fea9e57e47ab17cd9ef4a5cb593809e1016f550779d1d"
+          "ImageUri": "780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api@sha256:f1b8982212d40893c236b24c1217bf7825533accdcda0a413b4b7d56fc4852c7"
         },
         "PackageType": "Image",
         "FunctionName": "ecr-lambda-api-dev-app",
@@ -107,14 +107,14 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionzESzZN5XrglYbZk5xFZ32paagJvW95mVfEzNP1TXaI": {
+    "AppLambdaVersionOtht2ytxiBt1G1xUeUf4kmOmydtQUbjlri5w9NLNA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "7da03a1f822a0a49be2fea9e57e47ab17cd9ef4a5cb593809e1016f550779d1d"
+        "CodeSha256": "f1b8982212d40893c236b24c1217bf7825533accdcda0a413b4b7d56fc4852c7"
       }
     },
     "HttpApi": {
@@ -246,7 +246,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionzESzZN5XrglYbZk5xFZ32paagJvW95mVfEzNP1TXaI"
+        "Ref": "AppLambdaVersionOtht2ytxiBt1G1xUeUf4kmOmydtQUbjlri5w9NLNA"
       },
       "Export": {
         "Name": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
