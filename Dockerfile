@@ -1,11 +1,19 @@
 FROM public.ecr.aws/lambda/nodejs:20
 
 WORKDIR /app
+
 COPY package*.json ./
-RUN npm install --production
 
-COPY ./dist ${LAMBDA_TASK_ROOT}
+RUN npm install
 
-RUN cp -R node_modules ${LAMBDA_TASK_ROOT}/node_modules
+COPY . .
 
-CMD ["dist/app.handler"]
+RUN npm run build
+
+WORKDIR /var/task
+
+COPY ./node_modules /var/task/node_modules
+
+COPY ./dist /var/task/
+
+CMD ["app.handler"]
