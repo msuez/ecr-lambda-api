@@ -116,7 +116,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
-                        "S3Key": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z/ecr-lambda-api.zip"
+                        "S3Key": "serverless/ecr-lambda-api/dev/1732627748474-2024-11-26T13:29:08.474Z/ecr-lambda-api.zip"
                       },
                       "Handler": "dist/app.handler",
                       "Runtime": "nodejs20.x",
@@ -134,14 +134,14 @@
                       "AppLogGroup"
                     ]
                   },
-                  "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k": {
+                  "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA": {
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "AppLambdaFunction"
                       },
-                      "CodeSha256": "+6GmIZlyQ3UGFLg+IFR6sULxUCUd/AL4lbki4e4/cV8="
+                      "CodeSha256": "FeRw3lQppa2cCi9O3ZMkQGpppbHk0VQP2ju+3mBv+rE="
                     }
                   },
                   "HttpApi": {
@@ -274,7 +274,7 @@
                   "AppLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
-                      "Ref": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
+                      "Ref": "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA"
                     },
                     "Export": {
                       "Name": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
@@ -337,7 +337,7 @@
                 "timeout": 6,
                 "runtime": "nodejs20.x",
                 "vpc": {},
-                "versionLogicalId": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
+                "versionLogicalId": "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA"
               }
             },
             "plugins": [
@@ -351,7 +351,7 @@
               "artifactsS3KeyDirname": "serverless/ecr-lambda-api/dev/code-artifacts",
               "deploymentBucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
               "artifact": "/Users/matiassuez/Desktop/Workspace/Vercel/ecr-lambda-api/.serverless/ecr-lambda-api.zip",
-              "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z"
+              "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732627748474-2024-11-26T13:29:08.474Z"
             }
           },
           "configFileDirPath": "/Users/matiassuez/Desktop/Workspace/Vercel/ecr-lambda-api",
@@ -482,7 +482,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
-                  "S3Key": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z/ecr-lambda-api.zip"
+                  "S3Key": "serverless/ecr-lambda-api/dev/1732627748474-2024-11-26T13:29:08.474Z/ecr-lambda-api.zip"
                 },
                 "Handler": "dist/app.handler",
                 "Runtime": "nodejs20.x",
@@ -500,14 +500,14 @@
                 "AppLogGroup"
               ]
             },
-            "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k": {
+            "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "AppLambdaFunction"
                 },
-                "CodeSha256": "+6GmIZlyQ3UGFLg+IFR6sULxUCUd/AL4lbki4e4/cV8="
+                "CodeSha256": "FeRw3lQppa2cCi9O3ZMkQGpppbHk0VQP2ju+3mBv+rE="
               }
             },
             "HttpApi": {
@@ -640,7 +640,7 @@
             "AppLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
+                "Ref": "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA"
               },
               "Export": {
                 "Name": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
@@ -703,7 +703,7 @@
           "timeout": 6,
           "runtime": "nodejs20.x",
           "vpc": {},
-          "versionLogicalId": "AppLambdaVersionys8P0suO0l28JohUiUF3Sl13UBmmB2MORlMz9GQf55k"
+          "versionLogicalId": "AppLambdaVersion653n70rK74b5N47Z1bCtPozgg3Zy3PBD543lQ880UA"
         }
       },
       "plugins": [
@@ -717,7 +717,7 @@
         "artifactsS3KeyDirname": "serverless/ecr-lambda-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-31c9e456-3add",
         "artifact": "/Users/matiassuez/Desktop/Workspace/Vercel/ecr-lambda-api/.serverless/ecr-lambda-api.zip",
-        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732625429426-2024-11-26T12:50:29.426Z"
+        "artifactDirectoryName": "serverless/ecr-lambda-api/dev/1732627748474-2024-11-26T13:29:08.474Z"
       }
     },
     "serviceRawFile": "service: ecr-lambda-api\nframeworkVersion: '^4.0.0'\n\nprovider:\n  name: aws\n  runtime: nodejs20.x\n  region: us-east-1\n  httpApi:\n    cors: true\n    payload: '2.0' \n\nfunctions:\n  app:\n    handler: dist/app.handler\n    events:\n      - httpApi:\n          path: '/{proxy+}'\n          method: ANY\n\nplugins:\n  - serverless-offline\n\npackage:\n  patterns:\n    - '!node_modules/**'\n    - 'dist/**'\n",
@@ -758,12 +758,12 @@
     "serviceUniqueId": "arn:aws:cloudformation:us-east-1:780673962482:stack/ecr-lambda-api-dev/a685a860-abf1-11ef-903a-0affeec97801",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:780673962482:stack/ecr-lambda-api-dev/a685a860-abf1-11ef-903a-0affeec97801",
     "serviceProviderAwsCfStackCreated": "2024-11-26T12:26:24.226Z",
-    "serviceProviderAwsCfStackUpdated": "2024-11-26T12:50:37.017Z",
+    "serviceProviderAwsCfStackUpdated": "2024-11-26T13:29:15.906Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "AppLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:780673962482:function:ecr-lambda-api-dev-app:3",
+        "OutputValue": "arn:aws:lambda:us-east-1:780673962482:function:ecr-lambda-api-dev-app:4",
         "Description": "Current Lambda function version",
         "ExportName": "sls-ecr-lambda-api-dev-AppLambdaFunctionQualifiedArn"
       },
