@@ -48,13 +48,8 @@ export class Server {
 
         this.app.use(express.json());
 
-        
-
         //* Routes
-        this.app.use(
-            '/api',
-            this.routes,
-        );
+        this.app.use('/', this.routes);
 
         //* Catch all
         this.app.use('*', (req, res) => {
