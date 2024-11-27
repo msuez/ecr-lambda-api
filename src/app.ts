@@ -1,24 +1,15 @@
-import cors from 'cors';
-import express from 'express';
 import serverless from 'serverless-http';
-import swaggerUi from 'swagger-ui-express';
-import { swaggerSpec } from './config/swagger';
+
 import routes from './routes/';
+import { Server } from './httpd';
 
-const app = express();
+const app: Server = new Server({
+    env: 'dev',
+    port: 3000,
+    routes: routes,
+});
 
-app.use(
-    cors({
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-    })
-);
-app.use(express.json());
+const serverlessApp = app.startServerless();
 
-app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
-app.use('/api', routes);
-
-export const handler = serverless(app);
+export const handler = serverless(serverlessApp);
 export default app;
