@@ -1,12 +1,12 @@
 import serverless from 'serverless-http';
 
-import routes from './routes/';
-import { Server } from './httpd';
+import { Server, } from './httpd';
+import { AppRoutes, } from './routes/';
 
 const app: Server = new Server({
     env: 'dev',
     port: 3000,
-    routes: routes,
+    routes: AppRoutes.routes,
 });
 
 const serverlessApp = app.startServerless();

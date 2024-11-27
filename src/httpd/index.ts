@@ -1,9 +1,8 @@
 import cors from 'cors';
-import express, { Router } from 'express';
-import { Server as HttpServer } from 'http';
+import express, { Router, } from 'express';
+import { Server as HttpServer, } from 'http';
 
-
-import { Swagger } from '../config/swagger';
+import { errorHandler } from '../middlewares/errorHandler';
 
 interface ServerOptions {
     env: string,
@@ -49,12 +48,7 @@ export class Server {
 
         this.app.use(express.json());
 
-        //* Swagger documentation
-        this.app.use(
-            '/api/docs',
-            Swagger.serve,
-            Swagger.setup(),
-        );
+        
 
         //* Routes
         this.app.use(
@@ -66,6 +60,9 @@ export class Server {
         this.app.use('*', (req, res) => {
             res.status(405).send(`Method Not Allowed`);
         });
+
+        this.app.use( errorHandler );
+
     }
 
     public startServerless() {
