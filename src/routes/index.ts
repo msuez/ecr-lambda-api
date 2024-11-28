@@ -18,23 +18,20 @@ export class AppRoutes {
         const statusController = new StatusController();
 
         //* Swagger documentation
-        router.use(
-            '/docs',
-            Swagger.serve,
-            Swagger.setup(),
-        );
+        router.use('/docs', Swagger.serve, Swagger.setup());
 
         /**
          * @swagger
          * /ping:
          *   get:
-         *     summary: Verifica el estado del servidor
-         *     description: Devuelve "pong" si el servidor está funcionando.
+         *     summary: Verify server status
+         *     description: Returns "pong" if server is up and running
+         *     operationId: pingStatus
          *     tags:
          *       - Status
          *     responses:
          *       200:
-         *         description: Respuesta exitosa
+         *         description: Successful response
          *         content:
          *           application/json:
          *             schema:
