@@ -10,43 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Checkout del código fuente
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Paso 2: Configuración de Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # Paso 3: Instalación de dependencias y construcción del proyecto
       - name: Install dependencies and build
         run: |
           npm install
           npm run build
 
-      # Paso 4: Configuración de AWS CLI
+      - name: Run tests
+        run: |
+          npm run test
+
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v3
         with:
+          aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
 
-      # Paso 5: Login en ECR
       - name: Log in to Amazon ECR
         run: |
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 780673962482.dkr.ecr.us-east-1.amazonaws.com
 
-      # Paso 6: Construir la imagen de Docker y subirla a ECR
       - name: Build and push Docker image to ECR
         run: |
           docker build -t ecr-lambda-api .
           docker tag ecr-lambda-api:latest 780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api:latest
           docker push 780673962482.dkr.ecr.us-east-1.amazonaws.com/ecr-lambda-api:latest
 
-      # Paso 7: Actualizar la función Lambda con la nueva imagen
       - name: Deploy to AWS Lambda
         run: |
           aws lambda update-function-code \

@@ -6,6 +6,7 @@
     "start": "ts-node src/index.ts",
     "dev": "ts-node-dev --respawn src/index.ts",
     "dc:dev": "docker-compose up --build",
+    "test": "jest",
     "test:watch": "jest --watchAll --coverage",
     "test:coverage": "jest --coverage",
     "deploy": "npm run build && serverless deploy --force"
