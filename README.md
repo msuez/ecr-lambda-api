@@ -1,4 +1,5 @@
 # ecr-lambda-api
+This is an example of how we can deploy in AWS ECR a ExpresJS Api Rest.
 
 ## Run build
 
@@ -17,6 +18,11 @@ docker build -f Dockerfile.dev -t lambda-api-dev .
 #### Run container
 ```bash
 docker run -p 3000:3000 -v $(pwd):/usr/app lambda-api-dev
+```
+
+#### Run container
+```bash
+docker-compose up --build
 ```
 
 ## Run Tests (>80)
