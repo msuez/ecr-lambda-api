@@ -19,7 +19,7 @@ export class Swagger {
                         description: 'Servidor local',
                     },
                     {
-                        url: 'https://{stage}.execute-api.{region}.amazonaws.com',
+                        url: 'https://hf59u1j7j4.execute-api.us-east-1.amazonaws.com/',
                         description: 'Servidor de producción',
                     },
                 ],
