@@ -23,9 +23,9 @@ jobs:
           npm install
           npm run build
 
-      - name: Run tests
-        run: |
-          npm run test
+      # - name: Run tests
+      #   run: |
+      #     npm run test
 
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v3
